@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles.css'; 
+import { API_URL } from './api';
 
 function SignUp() {
   const [username, setUsername] = useState(''); 
@@ -16,7 +17,7 @@ function SignUp() {
     setSuccess('');
 
     try {
-        const response = await fetch('http://localhost:5000/api/auth/register', { 
+        const response = await fetch(`${API_URL}/auth/register`, { 
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, email, password }), 
