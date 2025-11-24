@@ -12,13 +12,15 @@ connectDB();
 
 // Middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: process.env.FRONTEND_URL || '*'  // chỉ định URL frontend
+}));
 
 // Routes
 app.use('/api/auth', auth);
 app.use('/api/courses', courses);
 app.use('/api/writing', writing);
 
-// Port
+// Port (Vercel sẽ tự set process.env.PORT)
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server chạy trên port ${PORT}`));
