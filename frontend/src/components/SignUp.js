@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles.css'; 
-import { API_URL } from './api';
+import { API_URL } from '../api';
 
 function SignUp() {
   const [username, setUsername] = useState(''); 
