@@ -19,11 +19,11 @@ router.post('/save', async (req, res) => {
 
     return res.json({
       success: true,
-      message: '✅ Bài viết đã được lưu thành công!',
+      message: ' Bài viết đã được lưu thành công!',
       data: writing,
     });
   } catch (error) {
-    console.error('❌ Lỗi khi lưu Writing:', error);
+    console.error(' Lỗi khi lưu Writing:', error);
     return res.status(500).json({ success: false, message: 'Lưu thất bại' });
   }
 });
