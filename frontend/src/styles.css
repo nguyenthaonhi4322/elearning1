@@ -133,7 +133,6 @@
     display: flex;
     align-items: center;
     gap: 30px; /* Tăng khoảng cách giữa các mục */
-    flex-wrap: nowrap;
 }
 
 .nav-item {
@@ -148,9 +147,7 @@
     color: #ffffff;
     border-bottom: 2px solid white; /* Hiệu ứng gạch dưới khi hover */
 }
-.nav-item, .user-greeting, .logout-button {
-    white-space: nowrap; /* Ngăn text bên trong button/link bị xuống dòng */
-}
+
 .user-greeting {
     font-size: 1rem;
     font-weight: 500;
@@ -795,29 +792,3 @@ h1, h2, h3, h4, h5, h6 {
     padding: 40px 0;
 }
 /*---------------------------------------*/
-/* BỔ SUNG MEDIA QUERY CHO HEADER */
-@media (max-width: 768px) {
-    .main-header {
-        max-width: 100%;
-        margin: 0;
-        padding: 15px 20px; /* Giảm padding ngang */
-    }
-
-    .nav-links {
-        /* Chuyển các liên kết từ ngang sang dọc */
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px; 
-    }
-
-    /* Nếu không ẩn/hiện menu, thì ít nhất phải cho chúng xuống dòng */
-    .main-header {
-        flex-wrap: wrap; /*xuống dòng */
-        justify-content: center;
-        text-align: center;
-    }
-
-    .app-logo {
-        margin-bottom: 10px;
-    }
-}
