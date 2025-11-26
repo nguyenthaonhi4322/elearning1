@@ -167,7 +167,7 @@ function Scores() {
         <div className="full-page-layout">
             <Header user={user} onLogout={handleLogout} />
 
-            <div className="main-content" style={{ padding: '20px', maxWidth: '960px', margin: '0 auto', overflowX: 'hidden' }}>
+            <div className="main-content" style={{ padding: '20px', maxWidth: '800px', margin: '0 auto', overflowX: 'hidden' }}>
                 <h1 className="section-title" style={{marginTop: '10px', borderBottom: '2px solid #eee', paddingBottom: '10px'}}>
                     <FaTrophy style={{ color: '#ffc107', marginRight: '10px' }}/> Lịch Sử Điểm Bài Tập
                 </h1>
@@ -186,7 +186,7 @@ function Scores() {
                         {scoreList.map(renderScoreCard)}
                     </div>
                 ) : (
-                    <div style={{ textAlign: 'center', padding: '40px', backgroundColor: '#fffbe6', border: '1px solid #ffeeba', borderRadius: '8px', marginTop: '30px' }}>
+                    <div style={{ textAlign: 'center', padding: '50px', backgroundColor: '#fffbe6', border: '1px solid #ffeeba', borderRadius: '8px', marginTop: '30px' }}>
                         <h2 style={{ color: '#856404' }}>Chưa có dữ liệu điểm</h2>
                         <p style={{ color: '#856404' }}>Vui lòng làm bài kiểm tra trong trang Luyện trắc nghiệm (Quiz) để xem điểm số.</p>
                         <button
