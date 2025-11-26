@@ -598,8 +598,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Media Queries cho các thiết bị nhỏ (giữ nguyên hoặc điều chỉnh nếu cần) */
 @media (max-width: 768px) {
-    /* Với flex-wrap đã thêm, không cần thiết phải đặt flex-direction: column nữa,
-       nhưng có thể điều chỉnh lại min-width của content-text nếu muốn */
     .mission-vision .content-text {
         min-width: 100%; /* Đảm bảo mỗi khối chiếm toàn bộ chiều rộng trên mobile */
     }
@@ -792,4 +790,49 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.1rem;
     color: #6c757d;
     padding: 40px 0;
+}
+/* ---------------------
+   FIX RESPONSIVE MOBILE
+---------------------- */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  nav, .header, .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 10px;
+  }
+
+  nav a, nav button {
+    font-size: 14px;
+  }
+
+  /* Slider */
+  .slide-container, 
+  .slider, 
+  .carousel, 
+  img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Các box, card, container lớn */
+  .container, .box, .content {
+    width: 100% !important;
+    padding: 10px !important;
+  }
+
+  /* Input search */
+  input, button {
+    font-size: 14px;
+  }
+
+  /* Hình ảnh */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
