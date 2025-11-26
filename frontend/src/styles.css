@@ -118,8 +118,6 @@
     margin: 10px auto 20px auto;
     overflow: hidden;
     max-width: 90%;
-
-    flex-wrap: nowrap;
 }
 
 .app-logo {
@@ -289,8 +287,8 @@ header, footer {
     position: relative; 
     width: 100%;
     max-width: 1200px;
-    height: 200px;
-    max-height: 200px;/* Tùy chỉnh kích thước tối đa */
+    height: 400px;
+    max-height: 400px;/* Tùy chỉnh kích thước tối đa */
     margin: 20px auto; /* Canh giữa và tạo khoảng cách */
     overflow: hidden;
     border-radius: 8px;
