@@ -178,7 +178,7 @@ function Scores() {
                             Đây là danh sách "{scoreList.length}" kết quả quiz gần nhất của bạn:
                         </p>
                         {/* Hiển thị tiêu đề cột */}
-                        <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0 15px', marginBottom: '10px', fontWeight: 'bold', color: '#343a40' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0 20px', marginBottom: '10px', fontWeight: 'bold', color: '#343a40' }}>
                             <span style={{ flex: '3 1 300px' }}>Chi tiết Quiz</span>
                             <span style={{ flex: '1 1 150px', textAlign: 'center' }}>Điểm số</span>
                             <span style={{ flex: '1 1 120px', textAlign: 'right' }}>Trạng thái & Thao tác</span>
@@ -186,7 +186,7 @@ function Scores() {
                         {scoreList.map(renderScoreCard)}
                     </div>
                 ) : (
-                    <div style={{ textAlign: 'center', padding: '50px', backgroundColor: '#fffbe6', border: '1px solid #ffeeba', borderRadius: '8px', marginTop: '30px' }}>
+                    <div style={{ textAlign: 'center', padding: '40px', backgroundColor: '#fffbe6', border: '1px solid #ffeeba', borderRadius: '8px', marginTop: '30px' }}>
                         <h2 style={{ color: '#856404' }}>Chưa có dữ liệu điểm</h2>
                         <p style={{ color: '#856404' }}>Vui lòng làm bài kiểm tra trong trang Luyện trắc nghiệm (Quiz) để xem điểm số.</p>
                         <button
