@@ -1,24 +1,97 @@
+/* ==========================
+   BODY & LAYOUT CHUNG
+========================== */
+html, body, #root {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.full-page-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex-grow: 1;
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* ==========================
+   HEADER
+========================== */
+.main-header {
+    background-color: #6e9277;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    margin: 10px auto 20px auto;
+    max-width: 90%;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.app-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.app-logo:hover {
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-item {
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: 0.2s;
+}
+
+.nav-item:hover {
+    border-bottom: 2px solid white;
+}
+
+/* ==========================
+   AUTH FORM
+========================== */
 .auth-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f2f5;
-    font-family: Arial, sans-serif;
-
-    background: url('../public/images/DKDN.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url('../public/images/DKDN.jpg') center/cover no-repeat;
 }
 
 .auth-form-box {
     max-width: 420px;
-    width: 90%;
-    padding: 40px;
-    background-color: #ffffff;
+    width: 95%;
+    padding: 20px;
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .auth-header {
@@ -40,7 +113,8 @@
 
 .form-input {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
+    font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -56,12 +130,11 @@
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px;
+    transition: all 0.3s;
 }
 
-/* Hiệu ứng di chuột*/
 .auth-button:hover {
-    background-color: #6e9277; 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     transform: translateY(-2px);
 }
 
@@ -77,115 +150,47 @@
     font-weight: bold;
 }
 
-.error-message {
-    color: red;
+.error-message, .success-message {
     text-align: center;
     margin-bottom: 15px;
-    border: 1px solid red;
     padding: 8px;
     border-radius: 4px;
+    border: 1px solid;
+}
+
+.error-message {
+    color: red;
     background-color: #ffe6e6;
+    border-color: red;
 }
 
 .success-message {
     color: green;
-    text-align: center;
-    margin-bottom: 15px;
-    border: 1px solid green;
-    padding: 8px;
-    border-radius: 4px;
     background-color: #e6ffe6;
+    border-color: green;
 }
 
-/* --- STYLE CHO HEADER --- */
-.main-header {
-    background-color: #6e9277; /* Màu xanh chủ đạo */
-    font-family: 'Arial', sans-serif;
-    color: white;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between; /* Căn giữa logo và các liên kết */
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky; /* Giữ header trên cùng khi cuộn */
-    top: 0;
-    z-index: 1000;
-
-    border-radius: 30px; 
-    margin: 10px auto 20px auto;
-    overflow: hidden;
-    max-width: 90%;
-}
-
-.app-logo {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-    transition: color 0.2s;
-}
-
-.app-logo:hover {
-    color: #ffffff; /* Màu sáng hơn khi hover */
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 30px; /* Tăng khoảng cách giữa các mục */
-}
-
-.nav-item {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 5px 0;
-    transition: color 0.2s, border-bottom 0.2s;
-}
-
-.nav-item:hover {
-    color: #ffffff;
-    border-bottom: 2px solid white; /* Hiệu ứng gạch dưới khi hover */
-}
-
-.user-greeting {
-    font-size: 1rem;
-    font-weight: 500;
-    margin-right: 15px;
-}
-
-.logout-button {
-    background-color: #dc3545; /* Màu đỏ cho Đăng xuất */
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.logout-button:hover {
-    background-color: #c82333;
-}
-
-/* --- STYLE CHO FOOTER --- */
+/* ==========================
+   FOOTER
+========================== */
 .main-footer {
     background-color: #333;
-    color: #fff;
+    color: white;
     padding: 30px 20px;
-    border-top: 5px solid #6e9277; /* Viền màu xanh nổi bật */
+    border-top: 5px solid #6e9277;
     width: 100%;
-    box-sizing: border-box;
     margin-top: auto;
-    margin-bottom: 0;
+    box-sizing: border-box;
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer-section {
@@ -195,23 +200,17 @@
 }
 
 .footer-section h3 {
-    color: #fff; /* Màu xanh nổi bật cho tiêu đề */
+    color: #fff;
     margin-bottom: 15px;
     font-size: 1.2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
     padding-bottom: 5px;
-}
-
-.footer-section p, .footer-section li {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 10px;
 }
 
 .footer-section a {
     color: #ccc;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: 0.3s;
 }
 
 .footer-section a:hover {
@@ -219,620 +218,120 @@
     text-decoration: underline;
 }
 
-.copyright {
-    margin-top: 20px;
-    font-size: 0.85rem;
-    color: #999;
-    text-align: center;
-    width: 100%;
-}
 .social-icons {
-    margin-top: 10px;
     display: flex;
-    gap: 15px;
     justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
 }
 
 .social-icons a {
     font-size: 20px;
     color: white;
-    transition: 0.3s;
 }
-/*------------------------------------*/
-.icon-fb:hover {
-    color: #1877F2;
-}
-.icon-x:hover {
-    color: #1E1E1E;
-}
-.icon-yt:hover {
-    color: #FF0000;
-}
-/*------------------------------------*/
 
-/* --- STYLE CHO LAYOUT TỔNG THỂ (QUAN TRỌNG ĐỂ FOOTER DÍNH VÀO CUỐI TRANG) --- */
-/* Đảm bảo Footer luôn dính xuống cuối màn hình */
-html, body, #root {
-    min-height: 100%;
-    margin: 0;
-    margin: 0; 
-    padding: 0;
-    box-sizing: border-box;
-    min-height: 100vh;
-}
-.full-page-layout {
-    display: flex;
-    flex-direction: column; 
-    min-height: 100vh; /* Đảm bảo layout chiếm toàn bộ chiều cao màn hình */
-    width: 100%;
-}
-.main-content {
-    flex-grow: 1; /* Cho phép nội dung chính chiếm không gian còn lại, đẩy Footer xuống */
-    padding: 20px 0;
-    width: 100%;   
-    justify-content: center;
-    padding-top: 10px;
-}
-header, footer {
-    flex-shrink: 0; 
-}
-.main-content h1:first-child{
-    margin-top: 0 ;
-}
-/*-----------------------------------------------*/
+.icon-fb:hover { color: #1877F2; }
+.icon-x:hover { color: #1E1E1E; }
+.icon-yt:hover { color: #FF0000; }
+
+/* ==========================
+   BANNER & TUTOR GRID
+========================== */
 .banner-carousel {
-    position: relative; 
     width: 100%;
     max-width: 1200px;
-    height: 400px;
-    max-height: 400px;/* Tùy chỉnh kích thước tối đa */
-    margin: 20px auto; /* Canh giữa và tạo khoảng cách */
+    height: 220px;
+    margin: 20px auto;
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-image {
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.carousel-button {
-    position: absolute;
-    top: 50%; 
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.4); 
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 28px;
-    line-height: 1; 
-    z-index: 10; 
-    transition: background-color 0.3s;
-}
-
-.carousel-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.prev-button {
-    left: 10px; 
-    border-radius: 8px;
-}
-
-.next-button {
-    right: 10px; 
-    border-radius:8px;
-}
-
-.section-title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-/* --- GRID 2 CỘT, MỖI CỘT 3 ẢNH --- */
 .tutor-grid-2col {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.tutor-column {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile-first: 1 cột */
+    gap: 25px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
 .tutor-card {
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  text-align: center;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  width: 100%;
-  height: 250px;
-  background-color: #000; /* để thấy vùng ảnh */
+    position: relative;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.25s, box-shadow 0.25s;
 }
 
 .tutor-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
-/* ẢNH PHỦ FULL CARD */
 .tutor-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* đảm bảo full mà không méo */
-  object-position: center;
-  z-index: 1;
-  transition: transform 0.6s ease;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
 }
 
-/* Hover: phóng nhẹ ảnh */
 .tutor-card:hover .tutor-image {
-  transform: scale(1.08);
+    transform: scale(1.08);
 }
 
-/* CHỮ NẰM GIỮA, KHÔNG MỜ NỀN */
 .tutor-info {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  z-index: 2;
-  background: none;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
 }
 
 .tutor-info h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 6px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 
 .tutor-info p {
-  font-size: 0.9rem;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 
-/* --- CSS cho nút Scroll To Top (Hình vuông, không viền) --- */
-
-.scroll-to-top-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #6e9277;
-    color: white;
-    border: none; 
-    
-    border-radius: 5px; 
-    width: 45px;
-    height: 45px;
-    
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    
-    font-size: 1.2rem; 
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.3s, transform 0.3s;
-    z-index: 1000;
-    opacity: 0.8;
-}
-
-.scroll-to-top-button:hover {
-    background-color: #6e9277;
-    opacity: 1;
-    transform: scale(1.05);
-}
-
-.scroll-to-top-button:focus {
-    outline: none;
-}
-
-/* --- Đảm bảo thẻ <strong> hiển thị in đậm trong nội dung bài viết --- */
-.article-content strong {
-    font-weight: 700 !important; /* Sử dụng font-weight mạnh và !important nếu cần ghi đè tuyệt đối */
-    color: #000000; /* Có thể đặt màu đen rõ ràng hơn */
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: 0;
-    /* Giúp kiểm soát tổng kích thước tốt hơn */
-    padding: 0; 
-}
-
-/* --- Styles cho trang AboutUs (ĐÃ CHỈNH SỬA) --- */
-
-/* Container chính của nội dung About Us */
-.about-us-container {
-    padding: 40px 20px;
-    /* Giảm max-width để làm hẹp bề ngang */
-    max-width: 960px; /* Thay đổi từ 1200px xuống 960px */
-    margin: 0 auto;
-}
-
-/* Tiêu đề chính */
-.about-header {
-    text-align: center;
-    margin-bottom: 50px;
-    padding: 20px;
-    background-color: #e8f5e9; /* Màu nền nhẹ */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-.about-title {
-    font-size: 2.5rem;
-    color: #2e7d32; /* Màu xanh lá đậm */
-    margin-bottom: 10px;
-}
-
-.about-subtitle {
-    font-size: 1.1rem;
-    color: #555;
-    /* Giới hạn chiều rộng của subtitle để nó không quá dài */
-    max-width: 700px; 
-    margin: 0 auto; /* Căn giữa subtitle */
-}
-
-/* Các phần chi tiết (Mission, Vision, Why Choose Us) */
-.about-section {
-    margin-bottom: 50px;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.about-section .section-title {
-    text-align: center;
-    color: #6e9277; /* Màu xanh dương */
-    margin-bottom: 30px;
-    font-size: 1.8rem;
-    border-bottom: 2px solid #6e9277;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-.mission-vision .content-block {
-    display: flex;
-    gap: 30px;
-    text-align: justify;
-    flex-wrap: wrap; /* Cho phép các cột tự động xuống dòng khi không đủ chỗ */
-}
-
-.mission-vision .content-text {
-    flex: 1;
-    min-width: 300px; /* Đảm bảo mỗi khối có chiều rộng tối thiểu */
-}
-
-.mission-vision h3 {
-    color: #43a047;
-    border-left: 4px solid #43a047;
-    padding-left: 10px;
-    margin-bottom: 15px;
-    font-size: 1.4rem;
-}
-
-/* Phần "Tại sao chọn chúng tôi" */
-.why-choose-us .features-grid {
-    display: grid;
-    /* Điều chỉnh grid để hiển thị 2 cột trên màn hình vừa, 1 cột trên màn hình nhỏ */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 20px;
-    text-align: center;
-}
-
-.feature-card {
-    background-color: #f7f7f7;
-    padding: 25px;
-    border-radius: 8px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-.about-icon {
-    font-size: 2.5rem;
-    color: #000000; /* Màu cam */
-    margin-bottom: 15px;
-}
-
-.feature-card h4 {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* Phần Kêu gọi hành động (CTA) */
-.cta-section {
-    text-align: center;
-    background-color: #6e9277;
-    color: white;
-    padding: 40px;
-    border-radius: 10px;
-}
-
-.cta-text {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #d13b4a;
-}
-
-/* Media Queries cho các thiết bị nhỏ (giữ nguyên hoặc điều chỉnh nếu cần) */
-@media (max-width: 768px) {
-    .mission-vision .content-text {
-        min-width: 100%; /* Đảm bảo mỗi khối chiếm toàn bộ chiều rộng trên mobile */
-    }
-    
-    .about-title {
-        font-size: 2rem;
-    }
-
-    .about-subtitle {
-        font-size: 1rem;
-    }
-
-    .cta-text {
-        font-size: 1.2rem;
+/* ==========================
+   RESPONSIVE MEDIA QUERIES
+========================== */
+@media (min-width: 600px) {
+    .tutor-grid-2col {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Thêm một media query nếu bạn muốn hẹp hơn nữa trên một số kích thước màn hình */
-@media (max-width: 600px) {
-    .about-us-container {
-        padding: 20px 15px;
-    }
-
-    .why-choose-us .features-grid {
-        grid-template-columns: 1fr; /* Chỉ hiển thị 1 cột trên màn hình rất nhỏ */
-    }
+@media (min-width: 1024px) {
+    .banner-carousel { height: 400px; }
+    .tutor-card { height: 250px; }
 }
 
-/* --- Styles cho trang PrivacyPolicy --- */
-
-/* Container chính */
-.privacy-policy-container {
-    padding: 40px 20px;
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-/* Header của trang */
-.privacy-header {
-    text-align: center;
-    margin-bottom: 50px;
-    padding: 20px;
-    background-color: #e3f2fd; /* Màu nền nhẹ xanh dương */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-.privacy-title {
-    font-size: 2.5rem;
-    color: #0d47a1; /* Màu xanh đậm */
-    margin-bottom: 10px;
-}
-
-.privacy-subtitle {
-    font-size: 1.1rem;
-    color: #555;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-/* Các section chi tiết */
-.privacy-section {
-    margin-bottom: 50px;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.privacy-section .section-title {
-    text-align: center;
-    color: #1976d2; /* Màu xanh dương */
-    margin-bottom: 30px;
-    font-size: 1.8rem;
-    border-bottom: 2px solid #1976d2;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-/* Nội dung text */
-.privacy-section p {
-    text-align: justify;
-    line-height: 1.6;
-    font-size: 1rem;
-    color: #333;
-}
-
-/* CTA Section */
-.privacy-cta-section {
-    text-align: center;
-    background-color: #1976d2;
-    color: white;
-    padding: 40px;
-    border-radius: 10px;
-}
-
-.privacy-cta-text {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.privacy-cta-button {
-    background-color: #0d47a1;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.privacy-cta-button:hover {
-    background-color: #08306b;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .privacy-title {
-        font-size: 2rem;
-    }
-
-    .privacy-subtitle {
-        font-size: 1rem;
-    }
-
-    .privacy-cta-text {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .privacy-policy-container {
-        padding: 20px 15px;
-    }
-}
-
-/*========================================================*/
-
-/* Container của thanh tìm kiếm */
-.search-bar-container {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-    margin: 20px auto;
-    max-width: 800px; /* Giới hạn chiều rộng của thanh tìm kiếm */
-    border-radius: 8px;
-    background-color: #ffffff; /* Nền trắng cho thanh tìm kiếm */
-}
-
-/* Trường input */
-.search-input {
-    padding: 12px 15px;
-    font-size: 16px;
-    border: 2px solid #6e9277; /* Viền màu xanh nổi bật */
-    border-right: none;
-    border-radius: 8px 0 0 8px;
-    flex-grow: 1; /* Cho phép input chiếm hết không gian */
-    outline: none;
-    transition: border-color 0.3s;
-}
-
-.search-input:focus {
-    border-color: #6e9277;
-}
-
-/* Nút tìm kiếm */
-.search-button {
-    padding: 12px 20px;
-    font-size: 16px;
-    background-color: #6e9277;
-    color: white;
-    border: 2px solid #6e9277;
-    border-left: none;
-    border-radius: 0 8px 8px 0;
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
-    display: flex;
-    align-items: center;
-}
-
-.search-button:hover {
-    background-color: #6e9277;
-    border-color: #6e9277;
-}
-
-/* CSS cho kết quả tìm kiếm */
-.no-results {
-    text-align: center;
-    font-size: 1.1rem;
-    color: #6c757d;
-    padding: 40px 0;
-}
-/* ---------------------
-   FIX RESPONSIVE MOBILE
----------------------- */
-@media (max-width: 768px) {
-
-  /* Navbar */
-  nav, .header, .navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-    padding: 10px;
-  }
-
-  nav a, nav button {
+/* Các input, button responsive */
+input, button {
     font-size: 14px;
-  }
+}
 
-  /* Slider */
-  .slide-container, 
-  .slider, 
-  .carousel, 
-  img {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-  }
-
-  /* Các box, card, container lớn */
-  .container, .box, .content {
-    width: 100% !important;
-    padding: 10px !important;
-  }
-
-  /* Input search */
-  input, button {
-    font-size: 14px;
-  }
-
-  /* Hình ảnh */
-  img {
+/* Hình ảnh co vừa container */
+img {
     max-width: 100%;
     height: auto;
-  }
 }
