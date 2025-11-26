@@ -133,6 +133,7 @@
     display: flex;
     align-items: center;
     gap: 30px; /* Tăng khoảng cách giữa các mục */
+    flex-wrap: nowrap;
 }
 
 .nav-item {
@@ -147,7 +148,9 @@
     color: #ffffff;
     border-bottom: 2px solid white; /* Hiệu ứng gạch dưới khi hover */
 }
-
+.nav-item, .user-greeting, .logout-button {
+    white-space: nowrap; /* Ngăn text bên trong button/link bị xuống dòng */
+}
 .user-greeting {
     font-size: 1rem;
     font-weight: 500;
