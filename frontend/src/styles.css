@@ -1,3 +1,8 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 .auth-container {
     display: flex;
     justify-content: center;
@@ -259,6 +264,7 @@ html, body, #root {
     padding: 0;
     box-sizing: border-box;
     min-height: 100vh;
+     overflow-x: hidden;
 }
 .full-page-layout {
     display: flex;
