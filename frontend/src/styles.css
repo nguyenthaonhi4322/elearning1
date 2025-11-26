@@ -284,7 +284,6 @@ header, footer {
     position: relative; 
     width: 100%;
     max-width: 1200px;
-    height: 400px;
     max-height: 400px;/* Tùy chỉnh kích thước tối đa */
     margin: 20px auto; /* Canh giữa và tạo khoảng cách */
     overflow: hidden;
