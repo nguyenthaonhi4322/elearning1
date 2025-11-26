@@ -178,7 +178,7 @@ function Scores() {
                             Đây là danh sách "{scoreList.length}" kết quả quiz gần nhất của bạn:
                         </p>
                         {/* Hiển thị tiêu đề cột */}
-                        <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0 20px', marginBottom: '10px', fontWeight: 'bold', color: '#343a40' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0 15px', marginBottom: '10px', fontWeight: 'bold', color: '#343a40' }}>
                             <span style={{ flex: '3 1 300px' }}>Chi tiết Quiz</span>
                             <span style={{ flex: '1 1 150px', textAlign: 'center' }}>Điểm số</span>
                             <span style={{ flex: '1 1 120px', textAlign: 'right' }}>Trạng thái & Thao tác</span>
