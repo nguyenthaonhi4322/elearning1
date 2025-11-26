@@ -86,7 +86,7 @@ function Scores() {
                 style={{
                     border: isPass ? '2px solid #28a745' : '2px solid #dc3545',
                     borderRadius: '8px',
-                    padding: '20px',
+                    padding: '15px',
                     marginBottom: '15px',
                     backgroundColor: 'white',
                     boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
@@ -167,7 +167,7 @@ function Scores() {
         <div className="full-page-layout">
             <Header user={user} onLogout={handleLogout} />
 
-            <div className="main-content" style={{ padding: '20px', maxWidth: '960px', margin: '0 auto' }}>
+            <div className="main-content" style={{ padding: '20px', maxWidth: '960px', margin: '0 auto', overflowX: 'hidden' }}>
                 <h1 className="section-title" style={{marginTop: '10px', borderBottom: '2px solid #eee', paddingBottom: '10px'}}>
                     <FaTrophy style={{ color: '#ffc107', marginRight: '10px' }}/> Lịch Sử Điểm Bài Tập
                 </h1>
