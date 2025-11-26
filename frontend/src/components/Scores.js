@@ -186,7 +186,7 @@ function Scores() {
                         {scoreList.map(renderScoreCard)}
                     </div>
                 ) : (
-                    <div style={{ textAlign: 'center', padding: '50px', backgroundColor: '#fffbe6', border: '1px solid #ffeeba', borderRadius: '8px', marginTop: '30px' }}>
+                    <div style={{ textAlign: 'center', width: '40px',padding: '50px', backgroundColor: '#fffbe6', border: '1px solid #ffeeba', borderRadius: '8px', marginTop: '30px' }}>
                         <h2 style={{ color: '#856404' }}>Chưa có dữ liệu điểm</h2>
                         <p style={{ color: '#856404' }}>Vui lòng làm bài kiểm tra trong trang Luyện trắc nghiệm (Quiz) để xem điểm số.</p>
                         <button
