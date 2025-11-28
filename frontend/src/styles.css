@@ -259,7 +259,7 @@ html, body, #root {
     padding: 0;
     box-sizing: border-box;
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow-x: auto;
 }
 .full-page-layout {
     display: flex;
