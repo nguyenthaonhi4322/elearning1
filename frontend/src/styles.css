@@ -299,6 +299,19 @@ header, footer {
     object-fit: cover;
 }
 
+/* STYLE DÀNH RIÊNG CHO MOBILE */
+@media (max-width: 600px) {
+    .banner-carousel {
+        height: 180px; /* hoặc 160px, 200px tùy bạn muốn */
+        border-radius: 20px;
+    }
+
+    .banner-carousel img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
 .carousel-button {
     position: absolute;
     top: 50%; 
