@@ -792,3 +792,28 @@ h1, h2, h3, h4, h5, h6 {
     padding: 40px 0;
 }
 /*---------------------------------------*/
+/* RESET overflow lỗi */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden ;
+}
+
+/* Mobile fix cho grid 2 cột */
+@media (max-width: 600px) {
+  .tutor-grid-2col {
+      grid-template-columns: 1fr ;
+  }
+}
+
+/* Fix cho header bị tràn */
+.main-header {
+    max-width: 100% ;
+}
+
+/* Fix thanh tìm kiếm bị tràn */
+.search-bar-container {
+    width: 100% ;
+}
