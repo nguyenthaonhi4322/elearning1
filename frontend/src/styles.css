@@ -99,7 +99,7 @@
 
 /* --- STYLE CHO HEADER --- */
 .main-header {
-    background-color: #6e9277; /* Màu xanh chủ đạo */
+    background-color: #6e9277;
     font-family: 'Arial', sans-serif;
     color: white;
     padding: 15px 40px;
@@ -107,7 +107,7 @@
     justify-content: space-between; /* Căn giữa logo và các liên kết */
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky; /* Giữ header trên cùng khi cuộn */
+    position: sticky; 
     top: 0;
     z-index: 1000;
 
@@ -126,7 +126,7 @@
 }
 
 .app-logo:hover {
-    color: #ffffff; /* Màu sáng hơn khi hover */
+    color: #ffffff; 
 }
 
 .nav-links {
@@ -145,7 +145,7 @@
 
 .nav-item:hover {
     color: #ffffff;
-    border-bottom: 2px solid white; /* Hiệu ứng gạch dưới khi hover */
+    border-bottom: 2px solid white; 
 }
 
 .user-greeting {
@@ -155,7 +155,7 @@
 }
 
 .logout-button {
-    background-color: #dc3545; /* Màu đỏ cho Đăng xuất */
+    background-color: #dc3545; /*Đăng xuất */
     color: white;
     border: none;
     padding: 8px 15px;
@@ -173,7 +173,7 @@
     background-color: #333;
     color: #fff;
     padding: 30px 20px;
-    border-top: 5px solid #6e9277; /* Viền màu xanh nổi bật */
+    border-top: 5px solid #6e9277; 
     width: 100%;
     box-sizing: border-box;
     margin-top: auto;
@@ -195,7 +195,7 @@
 }
 
 .footer-section h3 {
-    color: #fff; /* Màu xanh nổi bật cho tiêu đề */
+    color: #fff; 
     margin-bottom: 15px;
     font-size: 1.2rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -250,7 +250,7 @@
 }
 /*------------------------------------*/
 
-/* --- STYLE CHO LAYOUT TỔNG THỂ (QUAN TRỌNG ĐỂ FOOTER DÍNH VÀO CUỐI TRANG) --- */
+/* --- STYLE CHO LAYOUT TỔNG THỂ --- */
 /* Đảm bảo Footer luôn dính xuống cuối màn hình */
 html, body, #root {
     min-height: 100%;
@@ -268,7 +268,7 @@ html, body, #root {
     width: 100%;
 }
 .main-content {
-    flex-grow: 1; /* Cho phép nội dung chính chiếm không gian còn lại, đẩy Footer xuống */
+    flex-grow: 1; 
     padding: 20px 0;
     width: 100%;   
     justify-content: center;
@@ -287,7 +287,7 @@ header, footer {
     max-width: 1200px;
     height: 400px;
     max-height: 400px;/* Tùy chỉnh kích thước tối đa */
-    margin: 20px auto; /* Canh giữa và tạo khoảng cách */
+    margin: 20px auto; 
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -362,7 +362,7 @@ header, footer {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   width: 100%;
   height: 250px;
-  background-color: #000; /* để thấy vùng ảnh */
+  background-color: #000; 
 }
 
 .tutor-card:hover {
@@ -376,13 +376,12 @@ header, footer {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* đảm bảo full mà không méo */
+  object-fit: cover; 
   object-position: center;
   z-index: 1;
   transition: transform 0.6s ease;
 }
 
-/* Hover: phóng nhẹ ảnh */
 .tutor-card:hover .tutor-image {
   transform: scale(1.08);
 }
@@ -413,7 +412,7 @@ header, footer {
   text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 
-/* --- CSS cho nút Scroll To Top (Hình vuông, không viền) --- */
+/* --- CSS cho nút Scroll To Top --- */
 
 .scroll-to-top-button {
     position: fixed;
@@ -451,24 +450,22 @@ header, footer {
 
 /* --- Đảm bảo thẻ <strong> hiển thị in đậm trong nội dung bài viết --- */
 .article-content strong {
-    font-weight: 700 !important; /* Sử dụng font-weight mạnh và !important nếu cần ghi đè tuyệt đối */
-    color: #000000; /* Có thể đặt màu đen rõ ràng hơn */
+    font-weight: 700 !important; 
+    color: #000000; 
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 0;
-    /* Giúp kiểm soát tổng kích thước tốt hơn */
     padding: 0; 
 }
 
-/* --- Styles cho trang AboutUs (ĐÃ CHỈNH SỬA) --- */
+/* --- Styles cho trang AboutUs --- */
 
 /* Container chính của nội dung About Us */
 .about-us-container {
     padding: 40px 20px;
-    /* Giảm max-width để làm hẹp bề ngang */
-    max-width: 960px; /* Thay đổi từ 1200px xuống 960px */
+    max-width: 960px; 
     margin: 0 auto;
 }
 
@@ -477,14 +474,14 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     margin-bottom: 50px;
     padding: 20px;
-    background-color: #e8f5e9; /* Màu nền nhẹ */
+    background-color: #e8f5e9; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .about-title {
     font-size: 2.5rem;
-    color: #2e7d32; /* Màu xanh lá đậm */
+    color: #2e7d32; 
     margin-bottom: 10px;
 }
 
@@ -507,7 +504,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-section .section-title {
     text-align: center;
-    color: #6e9277; /* Màu xanh dương */
+    color: #6e9277; 
     margin-bottom: 30px;
     font-size: 1.8rem;
     border-bottom: 2px solid #6e9277;
@@ -524,7 +521,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .mission-vision .content-text {
     flex: 1;
-    min-width: 300px; /* Đảm bảo mỗi khối có chiều rộng tối thiểu */
+    min-width: 300px; 
 }
 
 .mission-vision h3 {
@@ -535,7 +532,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.4rem;
 }
 
-/* Phần "Tại sao chọn chúng tôi" */
+/* Phần "Why Choose Us" */
 .why-choose-us .features-grid {
     display: grid;
     /* Điều chỉnh grid để hiển thị 2 cột trên màn hình vừa, 1 cột trên màn hình nhỏ */
@@ -558,7 +555,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-icon {
     font-size: 2.5rem;
-    color: #000000; /* Màu cam */
+    color: #000000; 
     margin-bottom: 15px;
 }
 
@@ -568,7 +565,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
 }
 
-/* Phần Kêu gọi hành động (CTA) */
 .cta-section {
     text-align: center;
     background-color: #6e9277;
@@ -597,10 +593,10 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #d13b4a;
 }
 
-/* Media Queries cho các thiết bị nhỏ (giữ nguyên hoặc điều chỉnh nếu cần) */
+/* Media Queries cho các thiết bị nhỏ */
 @media (max-width: 768px) {
     .mission-vision .content-text {
-        min-width: 100%; /* Đảm bảo mỗi khối chiếm toàn bộ chiều rộng trên mobile */
+        min-width: 90%; /* Đảm bảo mỗi khối chiếm toàn bộ chiều rộng trên mobile */
     }
     
     .about-title {
@@ -616,7 +612,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Thêm một media query nếu bạn muốn hẹp hơn nữa trên một số kích thước màn hình */
+/*-------------------------------*/
 @media (max-width: 600px) {
     .about-us-container {
         padding: 20px 15px;
@@ -641,14 +637,14 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     margin-bottom: 50px;
     padding: 20px;
-    background-color: #e3f2fd; /* Màu nền nhẹ xanh dương */
+    background-color: #e3f2fd; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .privacy-title {
     font-size: 2.5rem;
-    color: #0d47a1; /* Màu xanh đậm */
+    color: #0d47a1; 
     margin-bottom: 10px;
 }
 
@@ -670,7 +666,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .privacy-section .section-title {
     text-align: center;
-    color: #1976d2; /* Màu xanh dương */
+    color: #1976d2; 
     margin-bottom: 30px;
     font-size: 1.8rem;
     border-bottom: 2px solid #1976d2;
@@ -747,19 +743,19 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     padding: 20px 0;
     margin: 20px auto;
-    max-width: 800px; /* Giới hạn chiều rộng của thanh tìm kiếm */
+    max-width: 800px; 
     border-radius: 8px;
-    background-color: #ffffff; /* Nền trắng cho thanh tìm kiếm */
+    background-color: #ffffff; 
 }
 
-/* Trường input */
+/* input */
 .search-input {
     padding: 12px 15px;
     font-size: 16px;
-    border: 2px solid #6e9277; /* Viền màu xanh nổi bật */
+    border: 2px solid #6e9277; 
     border-right: none;
     border-radius: 8px 0 0 8px;
-    flex-grow: 1; /* Cho phép input chiếm hết không gian */
+    flex-grow: 1;
     outline: none;
     transition: border-color 0.3s;
 }
