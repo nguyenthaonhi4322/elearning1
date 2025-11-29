@@ -404,7 +404,7 @@ function Grammar() {
                                 width: '100%', 
                                 height: '100%', 
                                 objectFit: 'cover',
-                                borderBottom: `5px solid ${topic.color || '#007bff'}` 
+                                borderBottom: `5px solid ${topic.color || '#6e9277'}` 
                             }} 
                         />
                     </div>
